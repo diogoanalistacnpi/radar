@@ -1,0 +1,171 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Radar do Pregão</title><meta name="description" content="Briefing diário do mercado financeiro por Diogo Prestes, Analista CNPI-T."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"><style>
+:root{--bg:#F6F7F9;--card:#FFFFFF;--fg:#1B2230;--mut:#5B6475;--line:#E2E5EB;--ink:#0A0F1C;--ink-fg:#F4F1EA;--gold:#F5B83D;--gold-d:#8A5A00;
+--ent:#FFF8E6;--up:#0E8F7E;--dn:#D23F33;--link:#1F4FBF;--soft:#F1F3F7;--th:#0A0F1C;--th-fg:#F4F1EA}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B0F1A;--card:#121828;--fg:#E6E9F0;--mut:#9AA3B5;--line:#232B3F;--ink:#05070D;--ink-fg:#F4F1EA;--gold:#F5B83D;--gold-d:#F5B83D;--ent:#2A2411;--up:#2BC4AE;--dn:#FF7A6E;--link:#8DB1FF;--soft:#171E31;--th:#1E2740;--th-fg:#F4F1EA;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B0F1A;--card:#121828;--fg:#E6E9F0;--mut:#9AA3B5;--line:#232B3F;--ink:#05070D;--ink-fg:#F4F1EA;--gold:#F5B83D;--gold-d:#F5B83D;--ent:#2A2411;--up:#2BC4AE;--dn:#FF7A6E;--link:#8DB1FF;--soft:#171E31;--th:#1E2740;--th-fg:#F4F1EA;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,'Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.6;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:820px;margin:0 auto;padding-block:20px 48px}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline} a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+h1,h2,h3{font-family:'Inter Display',Inter,'Segoe UI',Arial,sans-serif;font-weight:800;margin:0;text-wrap:balance}
+.hdr{background:var(--ink);color:var(--ink-fg);border-radius:14px;padding:22px 22px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:flex-end;gap:3px;height:28px}.logo i{display:block;width:4px;background:var(--gold);border-radius:1px}
+.brand b{letter-spacing:.28em;font-size:.8rem;font-weight:800}
+.hdr h1{font-size:clamp(1.5rem,5vw,2.1rem);margin-top:12px;line-height:1.15}.hdr h1 span{color:var(--gold)}
+.hdr p{margin:8px 0 0;font-size:.85rem;color:#C9CED8}.hdr .by{color:var(--ink-fg);font-weight:600}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+.how div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.85rem;background:var(--card);min-width:0}.how b{display:block;margin-bottom:2px}
+.toc{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 20px}
+.toc a{padding:5px 0;font-size:.92rem}
+h2.sec{font-size:1.35rem;margin:36px 0 12px;padding-bottom:7px;border-bottom:3px solid var(--gold);display:flex;justify-content:space-between;align-items:baseline;gap:12px;scroll-margin-top:12px}
+h2.sec a.top{font-size:.75rem;font-weight:600;white-space:nowrap}
+h3{font-size:1.05rem;margin:18px 0 4px}p{margin:0 0 10px;max-width:70ch}
+ol.res{margin:0;padding:0;list-style:none}ol.res li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+ol.res .n{flex:0 0 26px;height:26px;border-radius:50%;background:var(--ink);color:var(--gold);font-weight:800;font-size:.8rem;text-align:center;line-height:26px}
+ol.res .t{flex:1;min-width:0}.more{font-size:.85rem;font-weight:600;white-space:nowrap}
+.pb{display:none}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:.85rem;min-width:560px}
+caption{text-align:left;font-weight:800;font-size:1rem;padding:6px 0}
+th{background:var(--th);color:var(--th-fg);text-align:left;padding:7px 9px;font-weight:600}
+td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.up{color:var(--up);font-weight:700}.dn{color:var(--dn);font-weight:700}.fl{color:var(--mut);font-weight:700}
+.ent{background:var(--ent);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 14px;margin:14px 0;font-size:.93rem}
+.ent b.k{display:block;font-size:.72rem;letter-spacing:.08em;color:var(--gold-d);margin-bottom:3px}
+.warn{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:.85rem;color:var(--mut);margin:10px 0}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0}
+.chip{background:var(--th);color:var(--th-fg);border-radius:14px;padding:4px 11px;font-size:.82rem;font-weight:600}.arr{color:var(--gold);font-weight:800}
+.mech{padding:10px 0;border-bottom:1px solid var(--line)}
+.cb{display:inline-block;width:13px;height:13px;border:2px solid var(--fg);border-radius:3px;margin-right:9px;vertical-align:-1px}
+ul.chk{list-style:none;padding:0;margin:6px 0}ul.chk li{padding:4px 0}
+.q{margin:14px 0;scroll-margin-top:12px}.q ol{margin:6px 0 6px 22px;padding:0;list-style:upper-alpha}
+.ans{margin:10px 0;padding:10px 14px;background:var(--soft);border-radius:8px;scroll-margin-top:12px}
+dl{margin:0}dt{font-weight:700;margin-top:10px}dd{margin:0 0 2px;color:var(--mut)}
+.src{padding-left:20px}.src li{margin:4px 0;font-size:.88rem;overflow-wrap:anywhere}
+.meth{border:1.5px solid var(--fg);border-radius:10px;padding:14px 16px;margin-top:28px;font-size:.88rem;background:var(--card)}
+.meth b.k{font-size:1rem;display:block;margin-bottom:4px}
+footer.site{margin-top:24px;font-size:.8rem;color:var(--mut)}
+nav.top{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;padding:4px 0 14px}</style></head><body><main><nav class="top"><a href="index.html">Última edição</a><a href="arquivo.html">Arquivo de edições</a></nav>
+<div class="hdr">
+ <div class="brand"><div class="logo"><i style="height:10px"></i><i style="height:17px"></i><i style="height:13px"></i><i style="height:24px"></i><i style="height:15px"></i><i style="height:20px"></i></div><b>RADAR DO PREGÃO</b></div>
+ <h1>Briefing diário do mercado · <span>11 de novembro de 2026</span></h1>
+ <p>Quarta-feira · Elaborado por <span class="by">Diogo Prestes, Analista CNPI-T</span></p>
+ <p>Horários em Brasília (ET = horário de Nova York). Dados parciais, coletados às 15h34 de 11/11/2026, com fonte e horário indicados em cada número; podem sofrer revisão ao longo do dia.</p>
+</div>
+<div class="how">
+ <div><b>Navegue</b>Use o sumário e os links “Ver detalhes ›” e “↑ Sumário” para ir direto ao que interessa.</div>
+ <div><b>Aprenda</b>Os quadros “Entenda” explicam o conceito por trás dos fatos do dia.</div>
+ <div><b>Pratique</b>O teste rápido da seção 8 fixa os conceitos, com gabarito explicado.</div>
+</div>
+<div class="toc" id="sumario">
+ <a href="#s1">1. Resumo executivo</a><a href="#s2">2. Painel de números</a><a href="#s3">3. Brasil</a><a href="#s4">4. EUA e global</a><a href="#s5">5. Commodities</a><a href="#s6">6. Mecanismos de transmissão</a><a href="#s7">7. Agenda e checklist</a><a href="#s8">8. Teste rápido</a><a href="#s9">9. Glossário e fontes</a>
+</div>
+<h2 class="sec" id="s1"><span>1. Resumo executivo</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<ol class="res"><li><span class="n">1</span><span class="t">Copom manteve a Selic em 13,75% ao ano, em 4 de novembro, e interrompeu a sequência de cinco cortes; a ata foi divulgada em 10/11. <a class="more" href="#s3">Ver detalhes ›</a></span></li><li><span class="n">2</span><span class="t">Ibovespa e dólar seguem sensíveis ao tema fiscal do novo mandato; a imprensa registra uma proposta preliminar de ajuste apresentada ao Congresso. <a class="more" href="#s3">Ver detalhes ›</a></span></li><li><span class="n">3</span><span class="t">Nos EUA, a aposta em nova alta de juros em dezembro sustenta Treasuries de 10 anos perto de 5% e o DXY em torno de 102,9. <a class="more" href="#s4">Ver detalhes ›</a></span></li><li><span class="n">4</span><span class="t">Petrobras divulga o balanço do 3T26 após o fechamento de hoje; as projeções de dividendos variam de US$ 3,1 bi a US$ 4,2 bi. <a class="more" href="#s3">Ver detalhes ›</a></span></li><li><span class="n">5</span><span class="t">IPCA de outubro sai amanhã (12/11); petróleo segue volátil diante das negociações envolvendo o Irã. <a class="more" href="#s7">Ver detalhes ›</a></span></li></ol>
+<div class="pb"></div><h2 class="sec" id="s2"><span>2. Painel de números</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<div class="warn">Valores de mercado em tempo real variam entre fornecedores. Onde duas leituras da mesma fonte ou de fontes distintas divergiram, a divergência está indicada. “n/d” significa que o dado não foi localizado em fonte datada e confiável.</div>
+<div class="tw"><table><caption>Brasil</caption><tr><th>Indicador</th><th class="n">Nível</th><th class="n">Variação</th><th>Referência</th></tr><tr><td>Ibovespa (índice)</td><td class="n">172.480 pts</td><td class="n up">+0,67%</td><td>Trading Economics, 11/11 (leitura intradiária; cotação via CFD). Outra seção da mesma página traz 172.376 (+0,61%).</td></tr><tr><td>Dólar comercial (USD/BRL)</td><td class="n">R$ 5,5607</td><td class="n dn">−0,41%</td><td>Trading Economics, 11/11. Seção alternativa da página: 5,5595 (−0,43%).</td></tr><tr><td>Dólar à vista em 04/11</td><td class="n">R$ 5,4511</td><td class="n dn">−0,64%</td><td>Forbes Brasil (fechamento de 04/11, usado como referência de comparação).</td></tr><tr><td>Selic (meta)</td><td class="n">13,75% a.a.</td><td class="n fl">mantida</td><td>Copom, 04/11; decisão unânime, segundo a Nomad.</td></tr><tr><td>DI futuro (jan/2027 e vértice longo)</td><td class="n">n/d</td><td class="n fl">n/d</td><td>Cotação não localizada em fonte datada. Consultar a B3 ou a mesa de renda fixa.</td></tr><tr><td>Focus: IPCA 2026 / 2027</td><td class="n">5,2% / 4,8%</td><td class="n fl">—</td><td>Boletim Focus citado por Nomad e Seu Dinheiro, após o Copom.</td></tr></table></div><div class="tw"><table><caption>Estados Unidos</caption><tr><th>Indicador</th><th class="n">Nível</th><th class="n">Variação</th><th>Referência</th></tr><tr><td>S&P 500 (fechamento de 09/11)</td><td class="n">7.549,94</td><td class="n up">+2,35%</td><td>Xinhua, via The Star (10/11). Fechamento de 10/11 não localizado.</td></tr><tr><td>Dow Jones (09/11)</td><td class="n">52.389,75</td><td class="n up">+2,15%</td><td>Xinhua, via The Star. Todos os 11 setores do S&P 500 em alta.</td></tr><tr><td>Nasdaq Composite (09/11)</td><td class="n">25.253,14</td><td class="n up">+2,74%</td><td>Xinhua, via The Star.</td></tr><tr><td>Treasury de 10 anos (yield)</td><td class="n">4,99%</td><td class="n up">+0,095 p.p.</td><td>Trading Economics, 10/11. Em 04/11, segundo a Forbes Brasil: 4,888%.</td></tr><tr><td>DXY (índice do dólar)</td><td class="n">≈ 102,9</td><td class="n up">+0,67%</td><td>Trading Economics, 11/11; níveis ligeiramente distintos na página (102,90 a 102,92).</td></tr><tr><td>Fed Funds (faixa-alvo)</td><td class="n">3,75%–4,00%</td><td class="n fl">mantida em 28/10</td><td>Resumo de pesquisa com base em Kiplinger; confirmar no comunicado do Fed.</td></tr></table></div><div class="tw"><table><caption>Commodities e global</caption><tr><th>Indicador</th><th class="n">Nível</th><th class="n">Variação</th><th>Referência</th></tr><tr><td>Petróleo WTI</td><td class="n">US$ 86,97/bbl</td><td class="n up">+1,08%</td><td>Trading Economics, 11/11.</td></tr><tr><td>Petróleo Brent</td><td class="n">US$ 93,07/bbl</td><td class="n up">+1,72%</td><td>Trading Economics, 11/11. Em 04/11: US$ 94,62 (−8,67%), segundo a Forbes Brasil.</td></tr><tr><td>Ouro</td><td class="n">US$ 3.994,65/oz</td><td class="n dn">−0,94%</td><td>Trading Economics, 11/11. A página exibe sinais inconsistentes na variação.</td></tr><tr><td>Prata</td><td class="n">US$ 51,97/oz</td><td class="n up">+0,91%</td><td>Trading Economics, 11/11.</td></tr><tr><td>Minério de ferro</td><td class="n">US$ 92,54/t</td><td class="n dn">−0,18%</td><td>Trading Economics, 10/11 (CNY 683,50/t, −0,07%).</td></tr><tr><td>Cobre</td><td class="n">US$ 6,27/lb</td><td class="n up">+0,82%</td><td>Trading Economics, 11/11.</td></tr></table></div>
+<h2 class="sec" id="s3"><span>3. Brasil</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<h3>Câmbio e juros</h3>
+<p>O dólar comercial era negociado a R$ 5,56 na leitura da Trading Economics de 11/11, com queda de 0,41% no dia, mas acumula alta expressiva em um mês, após a reeleição do presidente Lula no segundo turno. Em 04/11, a Forbes Brasil registrou o dólar à vista a R$ 5,4511, e a Nomad aponta que a moeda foi de cerca de R$ 5,00 a cerca de R$ 5,50 desde a eleição.</p>
+<p>O Copom manteve a Selic em 13,75% ao ano em 4 de novembro, por unanimidade, segundo a Nomad, interrompendo cinco cortes consecutivos. O comunicado descreve o ambiente externo como “mais adverso” e menciona inflação acima do teto da meta, câmbio mais fraco e incerteza fiscal. A projeção do comitê para o segundo trimestre de 2028 subiu de 3,2% para 3,5%. Conforme o Seu Dinheiro, o Focus projeta Selic de 13,50% ao fim de 2026, o que exigiria mais um corte na reunião de 8 e 9 de dezembro. A Trading Economics interpreta a ata (10/11) como aberta a novos cortes se a atividade desacelerar; a Nomad espera manutenção em dezembro. As leituras divergem e dependem dos dados.</p>
+<div class="ent"><b class="k">ENTENDA · CURVA DE JUROS E DI FUTURO</b>O contrato de DI futuro negocia a taxa de juros esperada para o CDI até o vencimento. A sequência de taxas por vencimento forma a curva de juros: vértices curtos refletem a Selic esperada; vértices longos incorporam inflação, risco fiscal e prêmio de prazo. Quando o mercado exige mais retorno para carregar títulos longos, a curva tende a ficar mais inclinada.</div>
+<h3>Fiscal</h3>
+<p>Segundo a Trading Economics, o Ibovespa subiu em 11/11 após a equipe econômica apresentar ao Congresso uma proposta preliminar de ajuste fiscal, lida pelo mercado como o primeiro passo concreto desde a reeleição. Em 04/11, a Forbes Brasil registrou que o mercado seguia cauteloso por falta de medidas fiscais concretas. Fonte secundária indica que o ministro da Fazenda é Dario Durigan, que defendeu o PLOA 2027 como fruto do ajuste do governo; o texto da proposta e a curva de DI correspondente não foram localizados.</p>
+<div class="ent"><b class="k">ENTENDA · RESULTADO PRIMÁRIO E PRÊMIO DE RISCO</b>O resultado primário é a diferença entre receitas e despesas do governo, antes do pagamento de juros. Resultados mais fracos ou metas pouco críveis tendem a elevar o prêmio de risco exigido pelos investidores, o que costuma aparecer em juros longos mais altos e câmbio mais pressionado. A relação não é automática e depende da percepção de credibilidade.</div>
+<h3>Atividade econômica</h3>
+<p>O Copom cita desaceleração da atividade e primeiros sinais de esfriamento do mercado de trabalho (Nomad). Hoje, segundo o calendário da Trading Economics, saem o volume de serviços de setembro (consenso de −0,5% a/a) e dados do setor automotivo de outubro. Amanhã, o IBGE divulga o IPCA de outubro (consenso: 4,7% a/a; anterior: 4,74%).</p>
+<div class="ent"><b class="k">ENTENDA · A/A VERSUS M/M E T/T</b>A variação mensal (m/m) mede o ritmo recente e é volátil; a variação em 12 meses (a/a) compara com o mesmo período do ano anterior e suaviza oscilações; a trimestral (t/t) compara trimestres consecutivos. Ao ler um dado, convém verificar a base de comparação e se a série é dessazonalizada.</div>
+<h3>Empresas e bolsa</h3>
+<p>Segundo a Trading Economics, o Ibovespa fechou a sessão anterior em queda de 0,5% e opera em alta em 11/11, com bancos e B3 em destaque. Na leitura da mesma fonte, a Petrobras caiu cerca de 3% após resultados abaixo do esperado; a informação diverge do que o BPMoney e o Rankia descrevem, pois o balanço do 3T26 está previsto para depois do fechamento de hoje (ou de ontem, conforme a fonte). O InfoMoney também registra queda após proventos abaixo e capex acima do esperado. A divergência de calendário não pôde ser resolvida; confirmar no comunicado da companhia.</p>
+<p>Projeções para os dividendos do 3T26 variam de US$ 3,1 bi (Safra) a US$ 4,2 bi (Itaú BBA), com BTG e XP em US$ 3,6 bi, segundo o BPMoney. Em 04/11, a Forbes Brasil registrou lucro recorrente de R$ 12,6 bilhões do Itaú no trimestre e queda de 7,45% em BB Seguridade após revisão de prêmios. Segundo o InfoMoney, Marcopolo caiu após balanço abaixo do esperado.</p>
+<div class="ent"><b class="k">ENTENDA · LUCRO VERSUS DIVIDENDO</b>O lucro é o resultado contábil do período; o dividendo é a parcela efetivamente distribuída aos acionistas, definida pela política de remuneração da empresa e, no caso da Petrobras, ligada ao fluxo de caixa livre e ao nível de endividamento. Por isso uma empresa pode reportar lucro elevado e anunciar proventos abaixo do esperado, ou o inverso.</div>
+<h2 class="sec" id="s4"><span>4. EUA e global</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<h3>Inflação, juros e Fed</h3>
+<p>O mercado precifica nova alta de juros em dezembro. As probabilidades divergem por fonte: entre 75% e 80% (resumo baseado em Kiplinger), cerca de 84% (Trading Economics, títulos) e 86% (Trading Economics, dólar); a MUFG estima 55% a 60%. A Trading Economics registra que o CPI de outubro veio acima do esperado, mas não foi possível confirmar o número oficial; a prévia da MUFG projetava +0,29% (cheio) e +0,23% (núcleo) m/m. Segundo essa fonte, o diretor Christopher Waller admitiu apoiar alta de 50 pontos-base em dezembro se a inflação seguir acelerando, e Lorie Logan defendeu ao menos mais duas altas de 0,25 p.p.</p>
+<p>O yield do Treasury de 10 anos estava em 4,99% em 10/11, e o DXY, perto de 102,9, o maior nível desde abril de 2025 (Trading Economics). Próximas datas: reunião do FOMC em 8 e 9 de dezembro e CPI de novembro em 10 de dezembro.</p>
+<div class="ent"><b class="k">ENTENDA · YIELD DOS TREASURIES E CME FEDWATCH</b>O yield do Treasury é a taxa de retorno exigida pelo título do governo dos EUA e serve de referência global de custo do dinheiro: yields mais altos tendem a pesar sobre ativos de risco e moedas emergentes. A ferramenta CME FedWatch calcula a probabilidade de cada decisão do Fed a partir dos preços dos contratos de fed funds; são probabilidades de mercado, não decisões.</div>
+<div class="ent"><b class="k">ENTENDA · DXY</b>O DXY mede o dólar frente a uma cesta de moedas, em que o euro tem o maior peso. Quando sobe, indica dólar mais forte em termos globais, o que costuma coincidir com pressão sobre moedas emergentes e commodities cotadas em dólar, embora haja exceções.</div>
+<h3>Temas dominantes e bolsas</h3>
+<p>Em 09/11, os três índices de Nova York fecharam em forte alta, com todos os 11 setores do S&P 500 no positivo (Xinhua, via The Star). Em 5/11, houve realização em ações de inteligência artificial, que pressionou moedas emergentes (Trading Economics). Nas eleições de meio de mandato de 3/11, os democratas conquistaram Senado e Câmara, segundo a Forbes Brasil. As bolsas europeias fecharam em alta com o setor de tecnologia, limitadas pelo Fed (InfoMoney); dados da Ásia não foram coletados nesta edição.</p>
+<h2 class="sec" id="s5"><span>5. Commodities</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<p>O Brent era negociado a US$ 93,07 e o WTI, a US$ 86,97 em 11/11 (Trading Economics). Em 04/11, o Brent havia recuado 8,67%, para US$ 94,62, com apostas de que a mudança no Congresso americano possa acelerar o fim do conflito envolvendo EUA, Israel e Irã (Forbes Brasil). O Copom aponta o prolongamento dos conflitos no Oriente Médio como fator de pressão sobre petróleo e inflação.</p>
+<p>O minério de ferro foi a US$ 92,54 por tonelada em 10/11; a Forbes Brasil relacionou a alta da Vale em 04/11 a contratos mais fortes na China. O ouro operava perto de US$ 3.995 por onça, em baixa de 0,94%, e a prata, em US$ 51,97.</p>
+<div class="ent"><b class="k">ENTENDA · BRENT VERSUS WTI</b>Brent e WTI são referências de petróleo de origens distintas: o Brent, do Mar do Norte, orienta grande parte do comércio internacional; o WTI, dos EUA, reflete o mercado americano. O diferencial entre eles varia com estoques, transporte e geopolítica, e o preço do petróleo afeta a receita de produtoras como a Petrobras e as expectativas de inflação.</div>
+<h2 class="sec" id="s6"><span>6. Mecanismos de transmissão</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<div class="warn">Cadeias frequentes de transmissão, não regras fixas: na prática, os efeitos dependem de intensidade, expectativas e de outros fatores concorrentes. Têm finalidade educativa e não preveem preços.</div>
+<div class="mech"><b>1. Inflação dos EUA e dólar</b><div class="chain"><span class="chip">Inflação dos EUA acima do esperado</span><span class="arr">→</span><span class="chip">Apostas em alta do Fed</span><span class="arr">→</span><span class="chip">Yield do Treasury e DXY</span><span class="arr">→</span><span class="chip">Dólar frente ao real</span></div></div>
+<div class="mech"><b>2. Fiscal e juros longos</b><div class="chain"><span class="chip">Credibilidade fiscal</span><span class="arr">→</span><span class="chip">Prêmio de risco</span><span class="arr">→</span><span class="chip">DI longo</span><span class="arr">→</span><span class="chip">Ações sensíveis a juros</span></div></div>
+<div class="mech"><b>3. Petróleo e inflação</b><div class="chain"><span class="chip">Brent</span><span class="arr">→</span><span class="chip">Combustíveis e inflação</span><span class="arr">→</span><span class="chip">Expectativas do Focus</span><span class="arr">→</span><span class="chip">Política do Copom</span></div></div>
+<div class="mech"><b>4. Política de dividendos</b><div class="chain"><span class="chip">Brent e câmbio</span><span class="arr">→</span><span class="chip">Fluxo de caixa da Petrobras</span><span class="arr">→</span><span class="chip">Proventos</span><span class="arr">→</span><span class="chip">PETR3 e PETR4</span></div></div>
+<h2 class="sec" id="s7"><span>7. Agenda e checklist do dia</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<div class="tw"><table><caption>Agenda (horários de Brasília, convertidos do calendário da Trading Economics, que não informa o fuso; presumido UTC)</caption><tr><th>Quando</th><th>Evento</th><th>Consenso / anterior</th></tr>
+<tr><td>Qua 11/11, 09h</td><td>Brasil: volume de serviços (set), a/a</td><td>−0,5% / 0,6%</td></tr>
+<tr><td>Qua 11/11, após o fechamento</td><td>Petrobras: balanço do 3T26 (conforme o BPMoney)</td><td>Dividendos: US$ 3,1 bi a 4,2 bi (projeções)</td></tr>
+<tr><td>Qui 12/11, 09h</td><td>Brasil: IPCA de outubro</td><td>4,7% a/a; 0,4% m/m / 4,74%; 0,26%</td></tr>
+<tr><td>Qui 12/11, 10h30</td><td>EUA: pedidos de auxílio-desemprego</td><td>191 mil / 195 mil</td></tr>
+<tr><td>Qui 12/11, 12h</td><td>EUA: vendas de casas usadas (out)</td><td>4,0 mi / 3,85 mi</td></tr>
+<tr><td>Sex 13/11, 09h</td><td>Brasil: vendas no varejo (set), a/a</td><td>1,1% / 1,0%</td></tr>
+<tr><td>Sex 13/11, 10h30</td><td>EUA: PPI de outubro (m/m)</td><td>0,3% / 0,4%</td></tr>
+<tr><td>Seg 16/11, 08h–09h</td><td>Brasil: IGP-10 (nov); IBC-Br (set)</td><td>— / −0,1% (IBC-Br)</td></tr>
+<tr><td>Ter 17/11, 10h30</td><td>EUA: vendas no varejo (out)</td><td>0,6% / —</td></tr>
+<tr><td>8 e 9/12</td><td>Copom e FOMC (reuniões)</td><td>—</td></tr></table></div>
+<h3>Checklist do dia</h3>
+<ul class="chk">
+<li><span class="cb"></span>Verificar o comunicado do balanço da Petrobras (lucro, dividendos, capex) e a data real de divulgação.</li>
+<li><span class="cb"></span>Acompanhar a curva de DI e o dólar após os dados de serviços e atividade.</li>
+<li><span class="cb"></span>Conferir o noticiário fiscal: texto da proposta e reação do Congresso.</li>
+<li><span class="cb"></span>Observar o yield de 10 anos dos EUA e o DXY.</li>
+<li><span class="cb"></span>Registrar a leitura do Brent e as notícias sobre o Irã.</li>
+<li><span class="cb"></span>Preparar o IPCA de amanhã: núcleos e serviços, além do índice cheio.</li>
+</ul>
+<h2 class="sec" id="s8"><span>8. Teste rápido</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<div class="q" id="q1"><b>1.</b> O que representa a curva de juros construída com DI futuro?
+<ol><li>O preço dos contratos de câmbio</li><li>A taxa de juros esperada por vencimento</li><li>A inflação passada de cada setor</li><li>O lucro das empresas listadas</li></ol><a href="#a1">Ver resposta ›</a></div>
+<div class="q" id="q2"><b>2.</b> Em geral, o que um DXY mais alto indica?
+<ol><li>Dólar mais forte frente a uma cesta de moedas</li><li>Real mais forte frente ao dólar</li><li>Queda do yield dos Treasuries</li><li>Fim do ciclo de alta do Fed</li></ol><a href="#a2">Ver resposta ›</a></div>
+<div class="q" id="q3"><b>3.</b> Uma empresa pode ter lucro alto e, ainda assim, anunciar dividendos abaixo do esperado porque:
+<ol><li>Lucro e dividendo são o mesmo número</li><li>O dividendo depende da política de remuneração, do caixa e do endividamento</li><li>A bolsa fecha mais cedo</li><li>O lucro não é auditado</li></ol><a href="#a3">Ver resposta ›</a></div>
+<div class="q" id="q4"><b>4.</b> Qual a diferença entre uma variação a/a e uma m/m?
+<ol><li>A a/a é mensal e a m/m é anual</li><li>A a/a compara com o mesmo período do ano anterior e a m/m, com o mês anterior</li><li>Não há diferença</li><li>A m/m só vale para o PIB</li></ol><a href="#a4">Ver resposta ›</a></div>
+<h3>Gabarito</h3>
+<div class="ans" id="a1"><b>1. Alternativa B.</b> O DI futuro negocia a taxa de juros esperada para o período; o conjunto por vencimento forma a curva. <a href="#q1">‹ voltar à pergunta</a></div>
+<div class="ans" id="a2"><b>2. Alternativa A.</b> O DXY mede o dólar contra uma cesta de moedas; alta indica dólar mais forte em termos globais. <a href="#q2">‹ voltar à pergunta</a></div>
+<div class="ans" id="a3"><b>3. Alternativa B.</b> O dividendo decorre da política de remuneração e depende de caixa e endividamento, não só do lucro contábil. <a href="#q3">‹ voltar à pergunta</a></div>
+<div class="ans" id="a4"><b>4. Alternativa B.</b> A variação a/a compara com o mesmo período do ano anterior; a m/m, com o mês imediatamente anterior. <a href="#q4">‹ voltar à pergunta</a></div>
+<h2 class="sec" id="s9"><span>9. Glossário e fontes</span><a class="top" href="#sumario">↑ Sumário</a></h2>
+<dl>
+<dt>Selic</dt><dd>Taxa básica de juros da economia brasileira, definida pelo Copom.</dd>
+<dt>Copom</dt><dd>Comitê de Política Monetária do Banco Central do Brasil.</dd>
+<dt>DI futuro</dt><dd>Contrato futuro de taxa de juros que reflete o CDI esperado até o vencimento.</dd>
+<dt>Curva de juros</dt><dd>Relação entre taxas e prazos de vencimento.</dd>
+<dt>DXY</dt><dd>Índice do dólar frente a uma cesta de moedas.</dd>
+<dt>Yield</dt><dd>Taxa de retorno de um título, medida pelo preço de mercado.</dd>
+<dt>FOMC</dt><dd>Comitê do Fed que define os juros dos EUA.</dd>
+<dt>CME FedWatch</dt><dd>Ferramenta que estima probabilidades das decisões do Fed.</dd>
+<dt>Brent / WTI</dt><dd>Referências internacionais e americana para o preço do petróleo.</dd>
+<dt>Resultado primário</dt><dd>Receitas menos despesas do governo, sem os juros.</dd>
+<dt>Prêmio de risco</dt><dd>Retorno adicional exigido por assumir um risco.</dd>
+<dt>Focus</dt><dd>Pesquisa semanal do Banco Central com projeções de mercado.</dd>
+</dl>
+<h3>Fontes consultadas</h3>
+<ul class="src">
+<li><a href="https://tradingeconomics.com/brazil/stock-market">Trading Economics — Ibovespa</a></li>
+<li><a href="https://tradingeconomics.com/brazil/currency">Trading Economics — USD/BRL</a></li>
+<li><a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — Treasury de 10 anos</a></li>
+<li><a href="https://tradingeconomics.com/united-states/currency">Trading Economics — DXY</a></li>
+<li><a href="https://tradingeconomics.com/commodities">Trading Economics — Commodities</a></li>
+<li><a href="https://tradingeconomics.com/calendar">Trading Economics — Calendário econômico</a></li>
+<li><a href="https://www.thestar.com.my/news/world/2026/11/10/us-stocks-close-higher">The Star / Xinhua — Wall Street</a></li>
+<li><a href="https://forbes.com.br/forbes-money/2026/11/ibovespa-avancou-em-dia-de-tregua-com-valor-externo-dolar-registrou-leve-queda/">Forbes Brasil — Ibovespa e dólar (04/11)</a></li>
+<li><a href="https://www.seudinheiro.com/2026/economia/copom-segura-selic-em-1375-e-interrompe-ciclo-de-cortes-nos-juros-mlim/">Seu Dinheiro — Copom</a></li>
+<li><a href="https://www.nomadglobal.com/portal/analises/analise-do-copom-novembro-de-2026">Nomad — Análise do Copom</a></li>
+<li><a href="https://bpmoney.com.br/negocios/empresas/petrobras-petr4-dividendos-ate-42-bilhoes-3t26/">BPMoney — Petrobras 3T26</a></li>
+<li><a href="https://www.infomoney.com.br/mercados/">InfoMoney — Mercados</a></li>
+<li><a href="https://www.mufgresearch.com/macro/us-inflation-update-november-10-2026/">MUFG Research — Inflação dos EUA</a></li>
+<li><a href="https://www.kiplinger.com/investing/economy/october-2026-cpi-report-what-to-expect">Kiplinger — Prévia do CPI de outubro</a></li>
+</ul>
+<div class="meth"><b class="k">Metodologia e aviso</b>Informações reescritas a partir de veículos de imprensa e fornecedores de dados; os números têm horário e estão sujeitos a mudança, e fontes divergentes foram sinalizadas. Os quadros “Entenda” e os mecanismos têm finalidade educativa e não preveem preços. O conteúdo é informativo e educacional, não constitui recomendação de compra ou venda nem promessa de resultado. Operar no mercado envolve risco. Diogo Prestes, Analista CNPI-T (registro nº 10233).</div>
+</main></body></html>
