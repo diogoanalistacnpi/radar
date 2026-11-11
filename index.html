@@ -47,6 +47,16 @@ dl{margin:0}dt{font-weight:700;margin-top:10px}dd{margin:0 0 2px;color:var(--mut
 .meth{border:1.5px solid var(--fg);border-radius:10px;padding:14px 16px;margin-top:28px;font-size:.88rem;background:var(--card)}
 .meth b.k{font-size:1rem;display:block;margin-bottom:4px}
 footer.site{margin-top:24px;font-size:.8rem;color:var(--mut)}
+
+.q ol li{cursor:pointer;padding:8px 12px;margin:6px 0 6px -4px;border:1px solid var(--line);border-radius:8px;background:var(--card);list-style-position:inside}
+.q ol li:hover{border-color:var(--gold)}.q ol li:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.q.done ol li{cursor:default}.q.done ol li:hover{border-color:var(--line)}
+.q ol li.ok{border-color:var(--up);background:color-mix(in srgb,var(--up) 14%,var(--card))}
+.q ol li.no{border-color:var(--dn);background:color-mix(in srgb,var(--dn) 14%,var(--card))}
+.fb{margin:8px 0 0;padding:10px 14px;border-radius:8px;background:var(--soft);font-size:.92rem}
+.fb b.ok{color:var(--up)}.fb b.no{color:var(--dn)}
+.fb button{font:inherit;font-size:.82rem;margin-left:8px;background:none;border:0;color:var(--link);cursor:pointer;padding:0}
+.q .quizhint{font-size:.78rem;color:var(--mut)}
 nav.top{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;padding:4px 0 14px}</style></head><body><main><nav class="top"><a href="index.html">Última edição</a><a href="arquivo.html">Arquivo de edições</a></nav>
 <div class="hdr">
  <div class="brand"><div class="logo"><i style="height:10px"></i><i style="height:17px"></i><i style="height:13px"></i><i style="height:24px"></i><i style="height:15px"></i><i style="height:20px"></i></div><b>RADAR DO PREGÃO</b></div>
@@ -168,4 +178,31 @@ nav.top{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;pad
 <li><a href="https://www.kiplinger.com/investing/economy/october-2026-cpi-report-what-to-expect">Kiplinger — Prévia do CPI de outubro</a></li>
 </ul>
 <div class="meth"><b class="k">Metodologia e aviso</b>Informações reescritas a partir de veículos de imprensa e fornecedores de dados; os números têm horário e estão sujeitos a mudança, e fontes divergentes foram sinalizadas. Os quadros “Entenda” e os mecanismos têm finalidade educativa e não preveem preços. O conteúdo é informativo e educacional, não constitui recomendação de compra ou venda nem promessa de resultado. Operar no mercado envolve risco. Diogo Prestes, Analista CNPI-T (registro nº 10233).</div>
-</main></body></html>
+<script>
+(function(){
+document.querySelectorAll('.q').forEach(function(q){
+  var n=(q.id||'').replace('q',''),ans=document.getElementById('a'+n),items=q.querySelectorAll('ol li');
+  if(!ans||!items.length)return;
+  var m=ans.textContent.match(/Alternativa\s+([A-D])/i); if(!m)return;
+  var right=m[1].toUpperCase().charCodeAt(0)-65;
+  var expl=ans.textContent.replace(/^\s*\d+\.\s*Alternativa\s+[A-D]\.?\s*/i,'').replace(/‹\s*voltar à pergunta/,'').trim();
+  var link=q.querySelector('a[href^="#a"]'); if(link)link.style.display='none';
+  var hint=document.createElement('div');hint.className='quizhint';hint.textContent='Toque em uma alternativa para ver se acertou.';q.appendChild(hint);
+  var fb=document.createElement('div');fb.className='fb';fb.hidden=true;fb.setAttribute('aria-live','polite');q.appendChild(fb);
+  function pick(i){
+    if(q.classList.contains('done'))return;
+    q.classList.add('done');
+    items.forEach(function(li,j){if(j===right)li.classList.add('ok');else if(j===i)li.classList.add('no');});
+    var L=String.fromCharCode(65+right);
+    fb.innerHTML=(i===right?'<b class="ok">Correto.</b> ':'<b class="no">Resposta incorreta.</b> A alternativa certa é a '+L+'. ')+expl+' <button type="button">Tentar de novo</button>';
+    fb.hidden=false; hint.hidden=true;
+    fb.querySelector('button').onclick=function(){q.classList.remove('done');items.forEach(function(li){li.classList.remove('ok','no');});fb.hidden=true;hint.hidden=false;};
+  }
+  items.forEach(function(li,i){
+    li.tabIndex=0;li.setAttribute('role','button');
+    li.addEventListener('click',function(){pick(i);});
+    li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(i);}});
+  });
+});
+})();
+</script></main></body></html>
